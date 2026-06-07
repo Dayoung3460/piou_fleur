@@ -1,10 +1,44 @@
 {
-  "name": "${PROJECT_NAME}",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "piou-fleur",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "node scripts/copy-fonts.mjs"
   },
-  "private": true
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^3",
+    "@vercel/analytics": "^1.4.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.0.0",
+    "next": "14.2.35",
+    "next-intl": "^3.26.3",
+    "next-sanity": "^9",
+    "pretendard": "^1.3.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.2",
+    "sanity": "^3",
+    "styled-components": "^6.1.0",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
 }
