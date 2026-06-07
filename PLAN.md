@@ -2,7 +2,7 @@
 
 ## Context
 
-Piou Fleur는 럭셔리 플로럴 스튜디오의 브랜드 웹사이트다. 쇼핑몰이 아닌 "맡기고 싶다"는 신뢰감을 주는 포트폴리오/브랜드 사이트가 목표. 현재 레포는 완전히 비어있음 (.gitignore + README.md만 존재). Next.js 14 App Router + TypeScript + Tailwind CSS v3 + Sanity CMS v3 + next-intl(KO/EN)로 구축한다.
+Piou Fleur는 럭셔리 플로럴 스튜디오의 브랜드 웹사이트다. 쇼핑몰이 아닌 "맡기고 싶다"는 신뢰감을 주는 포트폴리오/브랜드 사이트가 목표. Next.js 14 App Router + TypeScript + Tailwind CSS v3 + Sanity CMS v3 + next-intl(KO/EN)로 구축한다.
 
 ---
 
@@ -15,9 +15,9 @@ Piou Fleur는 럭셔리 플로럴 스튜디오의 브랜드 웹사이트다. 쇼
 | `tailwindcss` | `^3.4.x` | v3 (v4 아님) |
 | `next-intl` | `^3.26.3` | v3 = Next 14 지원 (v4는 Next 15+) |
 | `sanity` | `^3.99.0` | next-sanity v9 필수 |
-| `next-sanity` | `^9.12.3` | Next 14 + Sanity v3 어댑터 |
+| `next-sanity` | `^9.12.3` | Next 14 + Sanity v3 어답터 |
 | `@sanity/image-url` | `^2.1.1` | 이미지 URL 빌더 |
-| `framer-motion` | `^12.x` | 섬세한 애니메이션 |
+| `framer-motion` | `^11.x` | 섬세한 애니메이션 |
 | `pretendard` | `^1.3.9` | 한국어 폰트 (npm → public/fonts 복사) |
 
 ---
@@ -43,7 +43,7 @@ npm install next-intl sanity next-sanity @sanity/image-url @sanity/vision \
 
 ```
 piou_fleur/
-├── next.config.ts              # next-intl 플러그인 + Sanity CDN 이미지 도메인
+├── next.config.mjs              # next-intl 플러그인 + Sanity CDN 이미지 도메인
 ├── middleware.ts               # next-intl 라우팅 (src/ 밖에 위치)
 ├── tailwind.config.ts
 ├── sanity.config.ts
@@ -70,7 +70,7 @@ piou_fleur/
     │   │   │   └── [slug]/page.tsx
     │   │   └── contact/page.tsx
     │   ├── studio/[[...tool]]/page.tsx   # Sanity Studio (locale 밖)
-    │   └── api/revalidate/route.ts       # ISR 웹훅
+    │   └── api/revalidate/route.ts       # ISR 웹훁
     │
     ├── components/
     │   ├── layout/    # Header, Footer, Navigation, MobileMenu, LocaleSwitcher
@@ -191,7 +191,7 @@ Sanity CMS → sanityFetch() (Server Component) → Page → UI Components
                                                       → Client Components (CategoryFilter, InquiryForm)
 ```
 
-`sanityFetch`의 `tags: ['portfolio']`와 `/api/revalidate` 웹훅으로 ISR 온디맨드 재검증.
+`sanityFetch`의 `tags: ['portfolio']`와 `/api/revalidate` 웹훁으로 ISR 온디맨드 재검증.
 
 ---
 
@@ -253,7 +253,7 @@ NEXT_PUBLIC_SITE_URL=https://pioufleur.com
 8. `middleware.ts`
 9. Sanity 스키마들 → `sanity.config.ts`, `sanity.cli.ts`
 10. `src/sanity/client.ts` → `image.ts` → `queries.ts`
-11. `next.config.ts`
+11. `next.config.mjs`
 12. 레이아웃: `src/app/layout.tsx` → `src/app/[locale]/layout.tsx`
 13. `src/app/studio/[[...tool]]/page.tsx`
 14. `src/app/api/revalidate/route.ts`
@@ -271,16 +271,16 @@ NEXT_PUBLIC_SITE_URL=https://pioufleur.com
 
 ## MVP (Phase 1) 범위
 
-- [ ] 프로젝트 셋업 + 디자인 시스템
-- [ ] Sanity 프로젝트 생성 + 스키마 3개
-- [ ] Header/Footer/Nav (데스크탑 + 모바일)
-- [ ] Home (Hero + Featured Portfolio + Services 티저 + CTA)
-- [ ] Portfolio 인덱스 (카테고리 필터) + 상세 페이지
-- [ ] Services 페이지
-- [ ] Contact 페이지 (채널 링크 + 문의 폼)
-- [ ] About 페이지 (정적 콘텐츠)
-- [ ] i18n KO/EN 스위처
-- [ ] 기본 SEO + JSON-LD
+- [x] 프로젝트 셋업 + 디자인 시스템
+- [x] Sanity 스키마 3개
+- [x] Header/Footer/Nav (데스크탑 + 모바일)
+- [x] Home (Hero + Featured Portfolio + Services 티저 + CTA)
+- [x] Portfolio 인덱스 (카테고리 필터) + 상세 페이지
+- [x] Services 페이지
+- [x] Contact 페이지 (채널 링크 + 문의 폼)
+- [x] About 페이지 (정적 콘텐츠)
+- [x] i18n KO/EN 스위체
+- [x] 기본 SEO + JSON-LD
 
 ## Phase 2 범위 (MVP 이후)
 
@@ -300,13 +300,13 @@ NEXT_PUBLIC_SITE_URL=https://pioufleur.com
 npm run typecheck   # TypeScript 에러 0
 npm run lint        # ESLint 에러 0
 npm run build       # 빌드 성공
-npm start           # 프로덕션 빌드 로컬 확인
+npm start           # 프로덕션 빌드 로컈 확인
 ```
 
 배포 전 체크리스트:
 - `/ko/*`, `/en/*` 모든 라우트 200 반환
 - `/studio`가 locale 라우팅에 걸리지 않음
-- 로케일 스위처가 현재 경로 유지
+- 로케일 스위체가 현재 경로 유지
 - Sanity CDN 이미지 `next/image`에서 정상 로드
 - Lighthouse 모바일 점수 > 85
 - schema.org JSON-LD 검증 (validator.schema.org)

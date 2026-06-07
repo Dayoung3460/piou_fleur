@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "journal": "Journal",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Flowers that become part of your memories.",
+    "subtagline": "A floral studio for weddings, corporate events, and spatial styling.",
+    "cta_portfolio": "View Portfolio",
+    "cta_contact": "Get in Touch"
+  },
+  "home": {
+    "featured_title": "Featured Works",
+    "featured_subtitle": "Selected works by Piou Fleur",
+    "services_title": "Services",
+    "services_subtitle": "Making every moment extraordinary",
+    "cta_title": "Planning a wedding, event, or floral project?",
+    "cta_subtitle": "Let's create something beautiful together.",
+    "cta_button": "Contact Us"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Every work tells a story",
+    "all": "All",
+    "categories": {
+      "wedding": "Wedding",
+      "event": "Event",
+      "styling": "Styling",
+      "editorial": "Editorial",
+      "classes": "Classes"
+    },
+    "project_info": "Project Info",
+    "client": "Client",
+    "location": "Location",
+    "year": "Year",
+    "category": "Category",
+    "back": "Back to Portfolio"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Completing your moments with flowers",
+    "wedding": {
+      "title": "Wedding Flowers",
+      "description": "From bouquets to full venue florals — we tell your story through flowers."
+    },
+    "event": {
+      "title": "Corporate & Events",
+      "description": "Floral styling for brand pop-ups, corporate events, and launch parties."
+    },
+    "styling": {
+      "title": "Spatial Styling",
+      "description": "Branding cafes, showrooms, and commercial spaces with flowers and botanicals."
+    },
+    "class": {
+      "title": "Floral Classes",
+      "description": "From one-day workshops to regular programs — a gift of time spent with flowers."
+    },
+    "inquiry": "Inquire"
+  },
+  "about": {
+    "title": "About",
+    "studio_title": "Piou Fleur",
+    "studio_description": "Piou Fleur is a floral studio dedicated to creating moments where flowers become part of your memories. Through weddings, corporate events, spatial styling, and classes, we bring the beauty of flowers into your everyday life.",
+    "philosophy_title": "Philosophy",
+    "philosophy_description": "We prioritize emotion over extravagance, and your story over trends. Every work is completed in a unique floral language that suits the client's space and moment.",
+    "florist_title": "Florist"
+  },
+  "journal": {
+    "title": "Journal",
+    "subtitle": "Stories about flowers and seasons",
+    "read_more": "Read More",
+    "back": "Back to Journal"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Tell us your story",
+    "kakao": "KakaoTalk Chat",
+    "instagram": "Instagram DM",
+    "phone": "Phone",
+    "email": "Email",
+    "inquiry_title": "Send an Inquiry",
+    "inquiry_type": "Inquiry Type",
+    "inquiry_date": "Preferred Date",
+    "inquiry_venue": "Venue (optional)",
+    "inquiry_message": "Message",
+    "inquiry_submit": "Send via Email",
+    "inquiry_types": {
+      "wedding": "Wedding Inquiry",
+      "event": "Event Inquiry",
+      "styling": "Styling Inquiry",
+      "class": "Class Inquiry",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "tagline": "Flowers that become part of your memories.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "view_all": "View All",
+    "back_to_top": "Back to Top"
+  }
+}
