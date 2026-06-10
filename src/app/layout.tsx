@@ -29,6 +29,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={locale} className={`${cormorant.variable} ${inter.variable}`}>
       <head>
+        <link
+          rel="preload"
+          href="/fonts/PretendardVariable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
