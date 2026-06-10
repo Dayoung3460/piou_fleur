@@ -17,7 +17,7 @@ export function Footer() {
             <p className="text-sm text-text-muted leading-relaxed">
               {t('footer.tagline')}
             </p>
-            <p className="text-xs text-text-muted/70 mt-2 leading-relaxed">
+            <p className="text-xs text-text-muted mt-2 leading-relaxed">
               {t('contact.address')}
             </p>
           </div>
