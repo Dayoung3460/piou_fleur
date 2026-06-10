@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 
+const EASE = [0.25, 0.46, 0.45, 0.94] as const
+
 export function HeroSection() {
   const t = useTranslations('hero')
 
@@ -19,7 +21,7 @@ export function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
           className="label-text mb-8"
         >
           Floral Studio
@@ -28,7 +30,7 @@ export function HeroSection() {
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 1, delay: 0.4, ease: EASE }}
           className="heading-display mb-6 max-w-4xl"
         >
           {t('tagline')}
@@ -37,7 +39,7 @@ export function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.8, delay: 0.6, ease: EASE }}
           className="body-text max-w-md mb-12"
         >
           {t('subtagline')}
@@ -46,7 +48,7 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.8, delay: 0.8, ease: EASE }}
           className="flex flex-col sm:flex-row gap-4"
         >
           <Link href="/portfolio" className="btn-primary">
@@ -61,7 +63,7 @@ export function HeroSection() {
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1.2, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ duration: 1.2, delay: 1, ease: EASE }}
         className="absolute bottom-0 left-0 right-0 h-px bg-border origin-left"
       />
 
