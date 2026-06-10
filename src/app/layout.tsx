@@ -10,7 +10,7 @@ const localBusinessJsonLd = {
   '@type': 'LocalBusiness',
   '@id': siteUrl,
   name: 'Piou Fleur',
-  description: '럭셔리 플로럴 스튜디오',
+  description: '피오유 플레르. 꽃이 기억의 일부가 되는 플로럴 스튜디오.',
   image: `${siteUrl}/og-image.jpg`,
   priceRange: '₩₩₩',
   address: {

@@ -29,7 +29,7 @@ export async function generateMetadata({
       template: '%s | Piou Fleur',
     },
     description: locale === 'ko'
-      ? '피우 플레르. 꽃이 기억의 일부가 되는 럭셔리 플로럴 스튜디오. 웨딩, 기업 행사, 공간 스타일링, 플라워 클래스.'
+      ? '피오유 플레르. 꽃이 기억의 일부가 되는 럭셔리 플로럴 스튜디오. 웨딩, 기업 행사, 공간 스타일링, 플라워 클래스.'
       : 'Piou Fleur. A luxury floral studio where flowers become part of your memories. Weddings, events, styling, classes.',
     openGraph: {
       type: 'website',
