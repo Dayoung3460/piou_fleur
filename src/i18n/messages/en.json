@@ -59,6 +59,14 @@
       "title": "Floral Classes",
       "description": "From one-day workshops to regular programs — a gift of time spent with flowers."
     },
+    "propose": {
+      "title": "Proposal Flowers",
+      "description": "A moment you'll remember for a lifetime. From venue styling to the bouquet — we complete your proposal with flowers."
+    },
+    "subscription": {
+      "title": "Flower Subscription",
+      "description": "Weekly or monthly seasonal flowers delivered to your space. A subscription service to fill your home, café, or office with blooms."
+    },
     "inquiry": "Inquire"
   },
   "about": {
@@ -78,16 +86,18 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Tell us your story",
+    "address": "153 Alcheonbuk-ro, 3F, Gyeongju, Korea",
+    "location_label": "Find Us",
     "kakao": "KakaoTalk Chat",
     "instagram": "Instagram DM",
     "phone": "Phone",
-    "email": "Email",
+    "naver": "Naver Talk",
     "inquiry_title": "Send an Inquiry",
     "inquiry_type": "Inquiry Type",
     "inquiry_date": "Preferred Date",
     "inquiry_venue": "Venue (optional)",
     "inquiry_message": "Message",
-    "inquiry_submit": "Send via Email",
+    "inquiry_submit": "Contact via KakaoTalk",
     "errors": {
       "required": "This field is required.",
       "min_message": "Please enter at least 10 characters."
