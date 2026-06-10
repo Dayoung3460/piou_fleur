@@ -1,10 +1,9 @@
 import { setRequestLocale } from 'next-intl/server'
 import { HeroSection } from '@/components/home/HeroSection'
-import { FeaturedPortfolio } from '@/components/home/FeaturedPortfolio'
 import { ContactCTA } from '@/components/home/ContactCTA'
 import { sanityFetch } from '@/sanity/client'
-import { featuredPortfolioQuery } from '@/sanity/queries'
-import type { PortfolioItem, Locale } from '@/types/sanity'
+import { siteSettingsQuery, featuredPortfolioQuery } from '@/sanity/queries'
+import type { PortfolioItem, SiteSettings } from '@/types/sanity'
 
 interface Props {
   params: { locale: string }
@@ -13,23 +12,27 @@ interface Props {
 export default async function HomePage({ params: { locale } }: Props) {
   setRequestLocale(locale)
 
+  let siteSettings: SiteSettings | null = null
   let featuredItems: PortfolioItem[] = []
+
   try {
-    featuredItems = await sanityFetch<PortfolioItem[]>({
-      query: featuredPortfolioQuery,
-      tags: ['portfolio'],
-    })
+    ;[siteSettings, featuredItems] = await Promise.all([
+      sanityFetch<SiteSettings>({ query: siteSettingsQuery, tags: ['siteSettings'] }),
+      sanityFetch<PortfolioItem[]>({ query: featuredPortfolioQuery, tags: ['portfolio'] }),
+    ])
   } catch {
-    // Sanity not configured yet — show empty state
+    // Sanity not configured yet
   }
 
-  const heroImage = featuredItems[0]?.coverImage ?? null
+  // Use dedicated hero images; fall back to featured portfolio covers
+  const heroImages = siteSettings?.heroImages?.length
+    ? siteSettings.heroImages
+    : featuredItems.map((i) => i.coverImage)
 
   return (
     <>
-      <HeroSection heroImage={heroImage} />
-      <FeaturedPortfolio items={featuredItems} locale={locale as Locale} />
-<ContactCTA />
+      <HeroSection images={heroImages} />
+      <ContactCTA />
     </>
   )
 }
