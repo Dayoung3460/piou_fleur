@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
+import { KAKAO_CHANNEL_URL } from '@/lib/contact'
 
 const schema = z.object({
   type: z.string().min(1),
@@ -29,17 +30,17 @@ export function InquiryForm() {
 
   const onSubmit = (data: FormData) => {
     const typeLabel = t(`inquiry_types.${data.type as typeof inquiryTypes[number]}`)
-    const subject = `[Piou Fleur] ${typeLabel}`
-    const body = [
-      `문의 유형: ${typeLabel}`,
-      data.date ? `희망 날짜: ${data.date}` : '',
-      data.venue ? `장소: ${data.venue}` : '',
-      `\n내용:\n${data.message}`,
+    const message = [
+      `${t('inquiry_type')}: ${typeLabel}`,
+      data.date ? `${t('inquiry_date')}: ${data.date}` : '',
+      data.venue ? `${t('inquiry_venue')}: ${data.venue}` : '',
+      `\n${t('inquiry_message')}:\n${data.message}`,
     ]
       .filter(Boolean)
       .join('\n')
 
-    window.location.href = `mailto:hello@pioufleur.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    navigator.clipboard?.writeText(message).catch(() => {})
+    window.open(KAKAO_CHANNEL_URL, '_blank')
   }
 
   const inputClass = cn(

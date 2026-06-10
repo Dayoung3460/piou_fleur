@@ -28,15 +28,13 @@ export default async function ContactPage({ params: { locale } }: Props) {
           <h1 className="heading-display max-w-xl">{t('subtitle')}</h1>
         </FadeIn>
 
-        <FadeIn delay={0.2} className="mb-20">
+        <FadeIn delay={0.2}>
           <ContactChannels />
         </FadeIn>
 
-        <div className="divider" />
-
-        <FadeIn delay={0.3} className="mt-16 max-w-2xl">
-          <h2 className="heading-2 mb-10">{t('inquiry_title')}</h2>
-          <InquiryForm />
+        <FadeIn delay={0.4} className="mt-12">
+          <p className="label-text mb-2">{t('location_label')}</p>
+          <p className="body-text">{t('address')}</p>
         </FadeIn>
       </div>
     </div>

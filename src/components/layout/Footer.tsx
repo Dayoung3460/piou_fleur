@@ -17,6 +17,9 @@ export function Footer() {
             <p className="text-sm text-text-muted leading-relaxed">
               {t('footer.tagline')}
             </p>
+            <p className="text-xs text-text-muted/70 mt-2 leading-relaxed">
+              {t('contact.address')}
+            </p>
           </div>
 
           <div>
@@ -38,7 +41,7 @@ export function Footer() {
             <p className="label-text mb-4">Contact</p>
             <div className="flex flex-col gap-2">
               <a
-                href="https://www.instagram.com/pioufleur"
+                href="https://www.instagram.com/piou_fleur/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-text-muted hover:text-text transition-colors duration-300 link-hover w-fit"
@@ -46,10 +49,12 @@ export function Footer() {
                 Instagram
               </a>
               <a
-                href="mailto:hello@pioufleur.com"
+                href="https://pf.kakao.com/_tJYuK"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-text-muted hover:text-text transition-colors duration-300 link-hover w-fit"
               >
-                hello@pioufleur.com
+                link.inpock
               </a>
             </div>
           </div>

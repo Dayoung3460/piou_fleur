@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { FadeIn } from '@/components/ui/FadeIn'
+import { KAKAO_CHANNEL_URL } from '@/lib/contact'
 
 interface Channel {
   key: string
@@ -11,27 +12,27 @@ interface Channel {
 const channels: Channel[] = [
   {
     key: 'kakao',
-    href: 'https://open.kakao.com/pioufleur',
+    href: KAKAO_CHANNEL_URL,
     icon: '💬',
     external: true,
   },
   {
     key: 'instagram',
-    href: 'https://ig.me/m/pioufleur',
+    href: 'https://ig.me/m/piou_fleur',
     icon: '📷',
     external: true,
   },
   {
     key: 'phone',
-    href: 'tel:+821000000000',
+    href: 'tel:+8250713713460',
     icon: '📞',
     external: false,
   },
   {
-    key: 'email',
-    href: 'mailto:hello@pioufleur.com',
+    key: 'naver',
+    href: 'https://talk.naver.com/ct/w45qx8?frm=mnmb&frm=nmb_detail#nafullscreen',
     icon: '✉️',
-    external: false,
+    external: true,
   },
 ]
 
@@ -52,7 +53,7 @@ export function ContactChannels() {
           >
             <span className="text-2xl">{icon}</span>
             <span className="text-sm font-medium text-text group-hover:text-accent transition-colors duration-300">
-              {t(key as 'kakao' | 'instagram' | 'phone' | 'email')}
+              {t(key as 'kakao' | 'instagram' | 'phone' | 'naver')}
             </span>
           </a>
         </FadeIn>
