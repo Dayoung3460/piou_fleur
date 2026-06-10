@@ -15,6 +15,7 @@
     --color-background: #F7F4EF;
     --color-text: #222222;
     --color-accent: #8A7A66;
+    --color-accent-dark: #5E4F3F;
     --color-secondary: #D8CFC2;
   }
 
@@ -63,7 +64,7 @@
   }
 
   .label-text {
-    @apply text-xs font-medium tracking-[0.15em] uppercase text-accent;
+    @apply text-xs font-medium tracking-[0.15em] uppercase text-accent-dark;
   }
 
   .btn-primary {

@@ -18,6 +18,7 @@ const config: Config = {
         accent: {
           DEFAULT: '#8A7A66',
           light: '#D8CFC2',
+          dark: '#5E4F3F',
         },
         border: '#D8CFC2',
       },
