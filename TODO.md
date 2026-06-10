@@ -121,7 +121,7 @@
 - [ ] `/ko/*`, `/en/*` 모든 라우트 200 반환
 - [ ] `/studio`가 i18n 라우팅에 걸리지 않음
 - [ ] Sanity CDN 이미지 `next/image`에서 정상 로드
-- [ ] Contact 폼 → 이메일 클라이언트 열림 확인
+- [ ] Contact 폼 → 카카오 채널 열림 확인
 - [ ] `npm run typecheck` — TypeScript 에러 0
 - [ ] `npm run build` — 빌드 성공
 - [ ] Lighthouse 모바일 점수 > 85
@@ -131,6 +131,7 @@
 
 ## Phase 7: 추가 기능 (선택)
 
+- [ ] **랜딩 페이지 풀블리드 사진 강조** — 레퍼런스 사이트(haeseok.com, dojuje.co.kr)처럼 히어로/메인 섹션에서 사진이 전면에 드러나는 레이아웃으로 개선. 현재 텍스트 중심 → 이미지 풀스크린 or 대형 split-layout 으로 전환
 - [ ] 포트폴리오 갤러리 라이트박스
 - [ ] KakaoTalk 플로팅 버튼
 - [ ] Sanity Visual Editing / Draft Mode
