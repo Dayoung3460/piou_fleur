@@ -11,7 +11,7 @@ Analyse all current git changes and create multiple focused commits by grouping 
 ## Commit Message Template
 
 ```
-<type>/ <subject>
+<type>: <subject>
 ```
 
 Where `<type>` is one of:
@@ -35,6 +35,6 @@ Where `<type>` is one of:
 ## Example
 
 If there are changes to a new gallery component, a locale message update, and a Sanity schema fix, create three separate commits:
-- `feat/ Add gallery lightbox component`
-- `docs/ Add KO/EN strings for gallery section`
-- `fix/ Correct Sanity image schema field type`
+- `feat: add gallery lightbox component`
+- `docs: add KO/EN strings for gallery section`
+- `fix: correct Sanity image schema field type`
