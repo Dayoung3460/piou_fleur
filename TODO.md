@@ -137,3 +137,14 @@
 - [ ] Instagram 피드 연동
 - [ ] Vercel OG 동적 이미지
 - [ ] `@sanity/document-internationalization` 플러그인
+
+---
+
+## Phase 8: 보안 업그레이드 (별도 브랜치 `feat/upgrade-next15`)
+
+> `npm audit`에서 발견된 고위험 취약점 해결. `npm audit fix --force` 사용 불가 (Sanity v2 다운그레이드 오추천).
+
+- [ ] Next.js 14 → 15 마이그레이션
+- [ ] next-intl v3 → v4 마이그레이션 (v4는 Next 15+ 전용)
+- [ ] 코드 변경 사항 검증 (`npm run typecheck`, `npm run build`)
+- [ ] Sanity는 v3 유지 (audit fix 대상 제외)
