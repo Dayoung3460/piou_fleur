@@ -9,7 +9,7 @@
   },
   "hero": {
     "tagline": "Flowers that become part of your memories.",
-    "subtagline": "A floral studio for weddings, corporate events, and spatial styling.",
+    "subtagline": "A floral studio for weddings, proposals, and the quiet moments worth remembering.",
     "cta_portfolio": "View Portfolio",
     "cta_contact": "Get in Touch"
   },
@@ -18,8 +18,8 @@
     "featured_subtitle": "Selected works by Piou Fleur",
     "services_title": "Services",
     "services_subtitle": "Making every moment extraordinary",
-    "cta_title": "Planning a wedding, event, or floral project?",
-    "cta_subtitle": "Let's create something beautiful together.",
+    "cta_title": "Want to turn a precious moment into a memory?",
+    "cta_subtitle": "Weddings, proposals, classes — let's make it happen together.",
     "cta_button": "Contact Us"
   },
   "portfolio": {
@@ -27,11 +27,12 @@
     "subtitle": "Every work tells a story",
     "all": "All",
     "categories": {
-      "wedding": "Wedding",
+      "bouquet": "Bouquet",
+      "flowers": "Flowers",
+      "proposal": "Proposal",
+      "basket": "Basket",
       "event": "Event",
-      "styling": "Styling",
-      "editorial": "Editorial",
-      "classes": "Classes"
+      "class": "Class"
     },
     "project_info": "Project Info",
     "client": "Client",
@@ -43,36 +44,36 @@
   "services": {
     "title": "Services",
     "subtitle": "Completing your moments with flowers",
-    "wedding": {
-      "title": "Wedding Flowers",
-      "description": "From bouquets to full venue florals — we tell your story through flowers."
+    "bouquet": {
+      "title": "Bouquet",
+      "description": "A bespoke bouquet for weddings, proposals, and anniversaries — crafted with your story and emotion, one of a kind."
     },
-    "event": {
-      "title": "Corporate & Events",
-      "description": "Floral styling for brand pop-ups, corporate events, and launch parties."
+    "flowers": {
+      "title": "Flowers",
+      "description": "Express your feelings through a beautifully arranged bouquet. Seasonal blooms, thoughtfully composed."
     },
-    "styling": {
-      "title": "Spatial Styling",
-      "description": "Branding cafes, showrooms, and commercial spaces with flowers and botanicals."
-    },
-    "class": {
-      "title": "Floral Classes",
-      "description": "From one-day workshops to regular programs — a gift of time spent with flowers."
-    },
-    "propose": {
-      "title": "Proposal Flowers",
+    "proposal": {
+      "title": "Proposal",
       "description": "A moment you'll remember for a lifetime. From venue styling to the bouquet — we complete your proposal with flowers."
     },
-    "subscription": {
-      "title": "Flower Subscription",
-      "description": "Weekly or monthly seasonal flowers delivered to your space. A subscription service to fill your home, café, or office with blooms."
+    "basket": {
+      "title": "Basket",
+      "description": "A flower basket filled with heart. Crafted for birthdays, grand openings, anniversaries, and every meaningful occasion."
+    },
+    "event": {
+      "title": "Event",
+      "description": "Floral styling for brand pop-ups, corporate events, and launch parties."
+    },
+    "class": {
+      "title": "Class",
+      "description": "From one-day workshops to regular programs — a gift of time spent with flowers."
     },
     "inquiry": "Inquire"
   },
   "about": {
     "title": "About",
     "studio_title": "Piou Fleur",
-    "studio_description": "Piou Fleur is a floral studio dedicated to creating moments where flowers become part of your memories. Through weddings, corporate events, spatial styling, and classes, we bring the beauty of flowers into your everyday life.",
+    "studio_description": "Piou Fleur is a floral studio dedicated to creating moments where flowers become part of your memories. Based in Gyeongju, we work with weddings, proposals, floral classes, and subscriptions — bringing the beauty of flowers into your everyday life.",
     "philosophy_title": "Philosophy",
     "philosophy_description": "We prioritize emotion over extravagance, and your story over trends. Every work is completed in a unique floral language that suits the client's space and moment.",
     "florist_title": "Florist"
