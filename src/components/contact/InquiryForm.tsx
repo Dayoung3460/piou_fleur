@@ -28,9 +28,10 @@ export function InquiryForm() {
   })
 
   const onSubmit = (data: FormData) => {
-    const subject = `[Piou Fleur] ${t(`inquiry_types.${data.type as typeof inquiryTypes[number]}`)}`
+    const typeLabel = t(`inquiry_types.${data.type as typeof inquiryTypes[number]}`)
+    const subject = `[Piou Fleur] ${typeLabel}`
     const body = [
-      `문의 유형: ${t(`inquiry_types.${data.type as typeof inquiryTypes[number]}`)}`,
+      `문의 유형: ${typeLabel}`,
       data.date ? `희망 날짜: ${data.date}` : '',
       data.venue ? `장소: ${data.venue}` : '',
       `\n내용:\n${data.message}`,
@@ -72,7 +73,7 @@ export function InquiryForm() {
             </label>
           ))}
         </div>
-        {errors.type && <p className={errorClass}>필수 항목입니다.</p>}
+        {errors.type && <p className={errorClass}>{t('errors.required')}</p>}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -103,7 +104,7 @@ export function InquiryForm() {
           placeholder="문의 내용을 자유롭게 작성해 주세요."
           className={cn(inputClass, 'resize-none')}
         />
-        {errors.message && <p className={errorClass}>최소 10자 이상 입력해 주세요.</p>}
+        {errors.message && <p className={errorClass}>{t('errors.min_message')}</p>}
       </div>
 
       <button type="submit" className="btn-primary w-full sm:w-auto">

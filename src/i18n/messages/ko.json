@@ -88,6 +88,10 @@
     "inquiry_venue": "장소 (선택)",
     "inquiry_message": "문의 내용",
     "inquiry_submit": "이메일로 보내기",
+    "errors": {
+      "required": "필수 항목입니다.",
+      "min_message": "최소 10자 이상 입력해 주세요."
+    },
     "inquiry_types": {
       "wedding": "웨딩 문의",
       "event": "이벤트 문의",

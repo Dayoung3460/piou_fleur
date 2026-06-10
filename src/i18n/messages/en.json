@@ -88,6 +88,10 @@
     "inquiry_venue": "Venue (optional)",
     "inquiry_message": "Message",
     "inquiry_submit": "Send via Email",
+    "errors": {
+      "required": "This field is required.",
+      "min_message": "Please enter at least 10 characters."
+    },
     "inquiry_types": {
       "wedding": "Wedding Inquiry",
       "event": "Event Inquiry",
