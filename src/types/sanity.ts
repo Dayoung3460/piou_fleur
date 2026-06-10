@@ -59,4 +59,8 @@ export interface JournalPost {
   publishedAt: string
 }
 
+export interface SiteSettings {
+  heroImages?: SanityImageObject[]
+}
+
 export type Locale = 'ko' | 'en'

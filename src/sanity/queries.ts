@@ -1,5 +1,7 @@
 import { groq } from 'next-sanity'
 
+export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{ heroImages }`
+
 export const portfolioListQuery = groq`
   *[_type == "portfolio" && defined(slug.current)] | order(publishedAt desc) {
     _id, title, slug, category, coverImage, featured, publishedAt, year, client, location

@@ -9,7 +9,15 @@ export default defineConfig({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'placeholder',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: (S) =>
+        S.list().title('Content').items([
+          S.listItem().title('Site Settings').id('siteSettings')
+            .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+          S.divider(),
+          ...S.documentTypeListItems().filter((i) => i.getId() !== 'siteSettings'),
+        ]),
+    }),
     visionTool(),
   ],
   schema: {
