@@ -5,6 +5,7 @@ import { SanityImage } from '@/components/ui/SanityImage'
 import { sanityFetch } from '@/sanity/client'
 import { servicesQuery } from '@/sanity/queries'
 import type { Service, Locale } from '@/types/sanity'
+import { getLocalized } from '@/lib/utils'
 import type { Metadata } from 'next'
 
 interface Props {
@@ -61,7 +62,7 @@ export default async function ServicesPage({ params: { locale } }: Props) {
                       {service?.images?.[0] && (
                         <SanityImage
                           image={service.images[0]}
-                          alt={service.title[locale as Locale] || ''}
+                          alt={getLocalized(service.title, locale) ?? ''}
                           fill
                           sizes="50vw"
                         />
@@ -73,7 +74,7 @@ export default async function ServicesPage({ params: { locale } }: Props) {
                       </p>
                       <h2 className="heading-2 mb-6">
                         {service
-                          ? service.title[locale as Locale] || service.title.ko
+                          ? getLocalized(service.title, locale)
                           : t(`${key as 'wedding' | 'event' | 'styling' | 'class'}.title`)}
                       </h2>
                       <p className="body-text leading-loose mb-8">

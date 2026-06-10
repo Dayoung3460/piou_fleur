@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/routing'
 import { SanityImage } from '@/components/ui/SanityImage'
 import type { JournalPost, Locale } from '@/types/sanity'
+import { getLocalized } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 
 interface JournalCardProps {
@@ -24,7 +25,7 @@ export function JournalCard({ post, locale }: JournalCardProps) {
         {post.thumbnail ? (
           <SanityImage
             image={post.thumbnail}
-            alt={post.title[locale] || post.title.ko}
+            alt={getLocalized(post.title, locale)}
             fill
             className="transition-transform duration-700 ease-luxury group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
@@ -35,7 +36,7 @@ export function JournalCard({ post, locale }: JournalCardProps) {
       </div>
       <time className="label-text block mb-2">{formatDate(post.publishedAt, locale)}</time>
       <h3 className="text-base font-medium text-text group-hover:text-accent transition-colors duration-300 mb-2">
-        {post.title[locale] || post.title.ko}
+        {getLocalized(post.title, locale)}
       </h3>
       <span className="btn-ghost text-xs">
         {t('read_more')} →

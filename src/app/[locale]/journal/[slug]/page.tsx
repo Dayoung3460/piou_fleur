@@ -9,6 +9,7 @@ import { journalBySlugQuery, journalSlugsQuery } from '@/sanity/queries'
 import { urlFor } from '@/sanity/image'
 import type { JournalPost, Locale } from '@/types/sanity'
 import type { Metadata } from 'next'
+import { getLocalized } from '@/lib/utils'
 
 interface Props {
   params: { locale: string; slug: string }
@@ -16,7 +17,7 @@ interface Props {
 
 export async function generateStaticParams() {
   try {
-    const posts = await sanityFetch<Array<{ slug: string }}>({
+    const posts = await sanityFetch<{ slug: string }[]>({
       query: journalSlugsQuery,
       tags: ['journal'],
     })
@@ -34,7 +35,7 @@ export async function generateMetadata({ params: { locale, slug } }: Props): Pro
       tags: ['journal'],
     })
     if (!post) return {}
-    const title = post.title[locale as Locale] || post.title.ko
+    const title = getLocalized(post.title, locale)
     return {
       title,
       openGraph: {
@@ -65,8 +66,8 @@ export default async function JournalDetailPage({ params: { locale, slug } }: Pr
 
   if (!post) notFound()
 
-  const title = post.title[locale as Locale] || post.title.ko
-  const content = post.content?.[locale as Locale] || post.content?.ko
+  const title = getLocalized(post.title, locale)
+  const content = getLocalized(post.content, locale)
 
   return (
     <div className="pt-24">

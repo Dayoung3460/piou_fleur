@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/FadeIn'
 import { SanityImage } from '@/components/ui/SanityImage'
 import type { PortfolioItem, Locale } from '@/types/sanity'
+import { getLocalized } from '@/lib/utils'
 
 interface FeaturedPortfolioProps {
   items: PortfolioItem[]
@@ -44,7 +45,7 @@ export function FeaturedPortfolio({ items, locale }: FeaturedPortfolioProps) {
                     {item.coverImage ? (
                       <SanityImage
                         image={item.coverImage}
-                        alt={item.title[locale] || item.title.ko}
+                        alt={getLocalized(item.title, locale)}
                         fill
                         className="transition-transform duration-700 ease-luxury group-hover:scale-105"
                         sizes="(max-width: 768px) 50vw, 25vw"
@@ -57,7 +58,7 @@ export function FeaturedPortfolio({ items, locale }: FeaturedPortfolioProps) {
                     {tPortfolio(`categories.${item.category}`)}
                   </p>
                   <p className="text-sm font-medium text-text group-hover:text-accent transition-colors duration-300">
-                    {item.title[locale] || item.title.ko}
+                    {getLocalized(item.title, locale)}
                   </p>
                 </Link>
               </StaggerItem>

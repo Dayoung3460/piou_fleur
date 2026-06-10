@@ -8,6 +8,7 @@ import { portfolioBySlugQuery, portfolioSlugsQuery } from '@/sanity/queries'
 import { urlFor } from '@/sanity/image'
 import type { PortfolioItem, Locale } from '@/types/sanity'
 import type { Metadata } from 'next'
+import { getLocalized } from '@/lib/utils'
 
 interface Props {
   params: { locale: string; category: string; slug: string }
@@ -15,7 +16,7 @@ interface Props {
 
 export async function generateStaticParams() {
   try {
-    const items = await sanityFetch<Array<{ slug: string; category: string }}>({
+    const items = await sanityFetch<{ slug: string; category: string }[]>({
       query: portfolioSlugsQuery,
       tags: ['portfolio'],
     })
@@ -33,8 +34,8 @@ export async function generateMetadata({ params: { locale, slug } }: Props): Pro
       tags: ['portfolio'],
     })
     if (!item) return {}
-    const title = item.title[locale as Locale] || item.title.ko
-    const description = item.description?.[locale as Locale] || item.description?.ko
+    const title = getLocalized(item.title, locale)
+    const description = getLocalized(item.description, locale)
     return {
       title,
       description,
@@ -66,8 +67,8 @@ export default async function PortfolioDetailPage({ params: { locale, slug } }: 
 
   if (!item) notFound()
 
-  const title = item.title[locale as Locale] || item.title.ko
-  const description = item.description?.[locale as Locale] || item.description?.ko
+  const title = getLocalized(item.title, locale)
+  const description = getLocalized(item.description, locale)
 
   return (
     <div className="pt-24">

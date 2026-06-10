@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/routing'
 import { SanityImage } from '@/components/ui/SanityImage'
 import type { PortfolioItem, Locale } from '@/types/sanity'
+import { getLocalized } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 
 interface PortfolioCardProps {
@@ -20,7 +21,7 @@ export function PortfolioCard({ item, locale }: PortfolioCardProps) {
         {item.coverImage ? (
           <SanityImage
             image={item.coverImage}
-            alt={item.title[locale] || item.title.ko}
+            alt={getLocalized(item.title, locale)}
             fill
             className="transition-transform duration-700 ease-luxury group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -37,7 +38,7 @@ export function PortfolioCard({ item, locale }: PortfolioCardProps) {
       <div>
         <p className="label-text mb-1">{t(`categories.${item.category}`)}</p>
         <h3 className="text-base font-medium text-text group-hover:text-accent transition-colors duration-300">
-          {item.title[locale] || item.title.ko}
+          {getLocalized(item.title, locale)}
         </h3>
         {item.client && (
           <p className="text-sm text-text-muted mt-1">{item.client}</p>
