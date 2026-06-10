@@ -43,7 +43,7 @@ export interface Service {
   _id: string
   title: LocalizedString
   slug: { current: string }
-  type: 'wedding' | 'event' | 'styling' | 'class'
+  type: 'wedding' | 'event' | 'styling' | 'class' | 'propose' | 'subscription'
   description?: LocalizedBlockContent
   images?: SanityImageObject[]
   order: number

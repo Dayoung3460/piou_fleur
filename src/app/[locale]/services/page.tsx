@@ -34,12 +34,8 @@ export default async function ServicesPage({ params: { locale } }: Props) {
     // Sanity not configured
   }
 
-  const staticServices = [
-    { key: 'wedding', type: 'wedding' },
-    { key: 'event', type: 'event' },
-    { key: 'styling', type: 'styling' },
-    { key: 'class', type: 'class' },
-  ]
+  const serviceKeys = ['wedding', 'event', 'styling', 'class', 'propose', 'subscription'] as const
+  type ServiceKey = typeof serviceKeys[number]
 
   return (
     <div className="pt-24">
@@ -51,8 +47,8 @@ export default async function ServicesPage({ params: { locale } }: Props) {
           </FadeIn>
 
           <div className="space-y-24">
-            {staticServices.map(({ key, type }, idx) => {
-              const service = services.find((s) => s.type === type)
+            {serviceKeys.map((key, idx) => {
+              const service = services.find((s) => s.type === key)
               const isReversed = idx % 2 !== 0
 
               return (
@@ -75,10 +71,10 @@ export default async function ServicesPage({ params: { locale } }: Props) {
                       <h2 className="heading-2 mb-6">
                         {service
                           ? getLocalized(service.title, locale)
-                          : t(`${key as 'wedding' | 'event' | 'styling' | 'class'}.title`)}
+                          : t(`${key as ServiceKey}.title`)}
                       </h2>
                       <p className="body-text leading-loose mb-8">
-                        {t(`${key as 'wedding' | 'event' | 'styling' | 'class'}.description`)}
+                        {t(`${key as ServiceKey}.description`)}
                       </p>
                       <Link href="/contact" className="btn-secondary self-start">
                         {t('inquiry')}
