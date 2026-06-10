@@ -15,10 +15,12 @@ const localBusinessJsonLd = {
   priceRange: '₩₩₩',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '알천북로 153 3층',
+    addressLocality: '경주시',
+    addressRegion: '경상북도',
     addressCountry: 'KR',
-    addressLocality: '서울',
   },
-  sameAs: ['https://www.instagram.com/pioufleur'],
+  sameAs: ['https://www.instagram.com/piou_fleur/'],
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
