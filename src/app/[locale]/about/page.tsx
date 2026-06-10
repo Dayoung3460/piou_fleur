@@ -67,9 +67,7 @@ export default async function AboutPage({ params: { locale } }: Props) {
               <div className="flex flex-col justify-center">
                 <h2 className="heading-2 mb-6">Florist</h2>
                 <p className="body-text leading-loose">
-                  {locale === 'ko'
-                    ? '피우 플레르의 플로리스트는 꽃의 언어로 감정을 담습니다. 각각의 작업에서 클라이언트의 이야기를 꽃으로 표현합니다.'
-                    : "Piou Fleur's florist speaks the language of flowers. Each work translates the client's story into a floral expression."}
+                  {t('florist_description')}
                 </p>
               </div>
             </div>
