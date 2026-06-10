@@ -3,11 +3,6 @@ export interface LocalizedString {
   en: string
 }
 
-export interface LocalizedText {
-  ko: string
-  en: string
-}
-
 export interface LocalizedBlockContent {
   ko: PortableTextBlock[]
   en: PortableTextBlock[]
@@ -37,7 +32,7 @@ export interface PortfolioItem {
   client?: string
   location?: string
   year?: number
-  description?: LocalizedText
+  description?: LocalizedString
   coverImage: SanityImageObject
   gallery?: SanityImageObject[]
   featured: boolean
