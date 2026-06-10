@@ -1,151 +1,150 @@
 # Piou Fleur — TODO
 
-## Phase 1: 코드 구현 (완료)
+## Phase 1: Code Implementation (Complete)
 
-### 프로젝트 셋업
-- [x] `package.json` 의존성 정의
-- [x] `tsconfig.json`, `postcss.config.js`, `tailwind.config.ts` 설정
-- [x] `scripts/copy-fonts.mjs` — Pretendard 폰트 복사 스크립트
-- [x] `src/app/globals.css` — Tailwind + @font-face + CSS 유틸리티 클래스
-- [x] `src/lib/utils.ts` — cn() 헬퍼
+### Project Setup
+- [x] `package.json` dependencies
+- [x] `tsconfig.json`, `postcss.config.js`, `tailwind.config.ts` configuration
+- [x] `scripts/copy-fonts.mjs` — Pretendard font copy script
+- [x] `src/app/globals.css` — Tailwind + @font-face + CSS utility classes
+- [x] `src/lib/utils.ts` — cn() helper
 - [x] `src/lib/fonts.ts` — Cormorant Garamond + Inter (next/font/google)
-- [x] `src/lib/seo.ts` — buildMetadata 헬퍼
-- [x] `src/types/sanity.ts` — 타입 정의 (PortfolioItem, Service, JournalPost)
+- [x] `src/lib/seo.ts` — buildMetadata helper
+- [x] `src/types/sanity.ts` — type definitions (PortfolioItem, Service, JournalPost)
 
 ### i18n
 - [x] `src/i18n/routing.ts` — defineRouting (ko/en)
 - [x] `src/i18n/request.ts` — getRequestConfig
 - [x] `src/i18n/messages/ko.json`
 - [x] `src/i18n/messages/en.json`
-- [x] `middleware.ts` — i18n 라우팅 (/studio 제외)
+- [x] `middleware.ts` — i18n routing (excluding /studio)
 
 ### Sanity CMS
 - [x] `sanity.config.ts`
 - [x] `sanity.cli.ts`
 - [x] `src/sanity/client.ts` — createClient + sanityFetch
-- [x] `src/sanity/image.ts` — urlFor 빌더
-- [x] `src/sanity/queries.ts` — 모든 GROQ 쿼리
+- [x] `src/sanity/image.ts` — urlFor builder
+- [x] `src/sanity/queries.ts` — all GROQ queries
 - [x] `src/sanity/schemas/portfolio.ts`
 - [x] `src/sanity/schemas/service.ts`
 - [x] `src/sanity/schemas/journal.ts`
 - [x] `src/sanity/schemas/blockContent.ts`
 
-### 레이아웃 & 공통
-- [x] `next.config.mjs` — next-intl 플러그인 + Sanity CDN
-- [x] `src/app/layout.tsx` — 루트 레이아웃
-- [x] `src/app/[locale]/layout.tsx` — 로케일 레이아웃 (폰트, NextIntlProvider, JSON-LD)
+### Layout & Common
+- [x] `next.config.mjs` — next-intl plugin + Sanity CDN
+- [x] `src/app/layout.tsx` — root layout
+- [x] `src/app/[locale]/layout.tsx` — locale layout (fonts, NextIntlProvider, JSON-LD)
 - [x] `src/app/studio/[[...tool]]/page.tsx` + `StudioPageClient.tsx`
-- [x] `src/app/api/revalidate/route.ts` — ISR 웹훅
+- [x] `src/app/api/revalidate/route.ts` — ISR webhook
 
-### UI 컴포넌트
+### UI Components
 - [x] `src/components/ui/SanityImage.tsx`
 - [x] `src/components/ui/FadeIn.tsx` — FadeIn, StaggerContainer, StaggerItem
 - [x] `src/components/ui/Button.tsx`
 - [x] `src/components/ui/Heading.tsx`
 
-### 레이아웃 컴포넌트
-- [x] `src/components/layout/Header.tsx` — 스크롤 감지 + 투명 헤더
+### Layout Components
+- [x] `src/components/layout/Header.tsx` — scroll detection + transparent header
 - [x] `src/components/layout/Footer.tsx`
 - [x] `src/components/layout/Navigation.tsx`
-- [x] `src/components/layout/MobileMenu.tsx` — Framer Motion 애니메이션
+- [x] `src/components/layout/MobileMenu.tsx` — Framer Motion animation
 - [x] `src/components/layout/LocaleSwitcher.tsx`
 
-### 페이지 & 섹션 컴포넌트
-- [x] Home 페이지 + HeroSection, FeaturedPortfolio, ServicesOverview, ContactCTA
-- [x] Portfolio 인덱스 + 카테고리 필터 + 상세 페이지
-- [x] Services 페이지
-- [x] Contact 페이지 + ContactChannels, InquiryForm (mailto 방식)
-- [x] About 페이지
-- [x] Journal 인덱스 + 상세 페이지 + PortableTextRenderer
+### Pages & Section Components
+- [x] Home page + HeroSection, FeaturedPortfolio, ServicesOverview, ContactCTA
+- [x] Portfolio index + category filter + detail page
+- [x] Services page
+- [x] Contact page + ContactChannels, InquiryForm (KakaoTalk)
+- [x] About page
+- [x] Journal index + detail page + PortableTextRenderer
 
 ### SEO
 - [x] `src/app/robots.ts`
-- [x] `src/app/[locale]/sitemap.ts` — 동적 사이트맵
-- [x] 각 페이지 `generateMetadata()` 함수
-- [x] JSON-LD LocalBusiness 스키마
+- [x] `src/app/[locale]/sitemap.ts` — dynamic sitemap
+- [x] `generateMetadata()` on each page
+- [x] JSON-LD LocalBusiness schema
 
-### 문서
-- [x] `PLAN.md` — 전체 구현 플랜
-- [x] `TODO.md` — 이 파일
+### Docs
+- [x] `PLAN.md` — full implementation plan
+- [x] `TODO.md` — this file
 
 ---
 
-## Phase 2: Sanity 프로젝트 설정
+## Phase 2: Sanity Project Setup
 
-- [ ] sanity.io/manage 에서 새 프로젝트 생성 (`piou-fleur` / dataset: `production`)
-- [ ] Project ID 복사
-- [ ] `.env.local` 파일 생성 (`.env.local.example` 참고)
+- [ ] Create new project at sanity.io/manage (`piou-fleur` / dataset: `production`)
+- [ ] Copy Project ID
+- [ ] Create `.env.local` file (see `.env.local.example`)
   ```
-  NEXT_PUBLIC_SANITY_PROJECT_ID=발급받은_ID
+  NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
   NEXT_PUBLIC_SANITY_DATASET=production
   SANITY_API_TOKEN=write_token
-  SANITY_REVALIDATE_SECRET=랜덤_문자열
+  SANITY_REVALIDATE_SECRET=random_string
   NEXT_PUBLIC_SITE_URL=https://pioufleur.com
   ```
 
 ---
 
-## Phase 3: 로컬 개발 환경 실행
+## Phase 3: Local Development Setup
 
-- [ ] `git pull origin claude/peaceful-noether-3sc1M` — 코드 로컬에 받기
-- [ ] `npm install` — 의존성 설치
-- [ ] `npm run dev` — 개발 서버 실행 (localhost:3000)
-- [ ] `/ko` 홈 페이지 확인
-- [ ] `/en` 영문 페이지 확인
-- [ ] `/studio` Sanity Studio 접속 확인
-- [ ] KO ↔ EN 스위처 동작 확인
-- [ ] 모바일 메뉴 동작 확인
-
----
-
-## Phase 4: 콘텐츠 입력 (Sanity Studio)
-
-- [ ] Portfolio 아이템 5개 이상 입력 (coverImage 포함, featured: true 최소 4개)
-- [ ] Service 4개 입력 (wedding / event / styling / class)
-- [ ] Journal 포스트 1~2개 입력
+- [ ] `npm install` — install dependencies
+- [ ] `npm run dev` — start dev server (localhost:3000)
+- [ ] Verify `/ko` home page
+- [ ] Verify `/en` English page
+- [ ] Verify `/studio` Sanity Studio access
+- [ ] Test KO ↔ EN locale switcher
+- [ ] Test mobile menu
 
 ---
 
-## Phase 5: 배포 (Vercel)
+## Phase 4: Content Entry (Sanity Studio)
 
-- [ ] Vercel 프로젝트 생성 + GitHub 레포 연결
-- [ ] Vercel에 환경변수 설정 (Phase 2와 동일)
-- [ ] 도메인 연결 (pioufleur.com)
-- [ ] sanity.io/manage → CORS에 배포 도메인 추가
-- [ ] Sanity 웹훅 설정 (`/api/revalidate?secret=...`)
+- [ ] Enter 5+ Portfolio items (with coverImage, at least 4 with featured: true)
+- [ ] Enter 6 Services (wedding / event / styling / class / propose / subscription)
+- [ ] Enter 1–2 Journal posts
 
 ---
 
-## Phase 6: QA 체크리스트
+## Phase 5: Deployment (Vercel)
 
-- [ ] `/ko/*`, `/en/*` 모든 라우트 200 반환
-- [ ] `/studio`가 i18n 라우팅에 걸리지 않음
-- [ ] Sanity CDN 이미지 `next/image`에서 정상 로드
-- [ ] Contact 폼 → 카카오 채널 열림 확인
-- [ ] `npm run typecheck` — TypeScript 에러 0
-- [ ] `npm run build` — 빌드 성공
-- [ ] Lighthouse 모바일 점수 > 85
-- [ ] schema.org JSON-LD 검증 (validator.schema.org)
+- [ ] Create Vercel project + connect GitHub repo
+- [ ] Set environment variables on Vercel (same as Phase 2)
+- [ ] Connect domain (pioufleur.com)
+- [ ] Add deployed domain to CORS in sanity.io/manage
+- [ ] Set up Sanity webhook (`/api/revalidate?secret=...`)
 
 ---
 
-## Phase 7: 추가 기능 (선택)
+## Phase 6: QA Checklist
 
-- [ ] **랜딩 페이지 풀블리드 사진 강조** — 레퍼런스 사이트(haeseok.com, dojuje.co.kr)처럼 히어로/메인 섹션에서 사진이 전면에 드러나는 레이아웃으로 개선. 현재 텍스트 중심 → 이미지 풀스크린 or 대형 split-layout 으로 전환
-- [ ] 포트폴리오 갤러리 라이트박스
-- [ ] KakaoTalk 플로팅 버튼
+- [ ] All `/ko/*`, `/en/*` routes return 200
+- [ ] `/studio` not caught by i18n routing
+- [ ] Sanity CDN images load correctly via `next/image`
+- [ ] Contact form → KakaoTalk channel opens
+- [ ] `npm run typecheck` — 0 TypeScript errors
+- [ ] `npm run build` — build succeeds
+- [ ] Lighthouse mobile score > 85
+- [ ] schema.org JSON-LD validation (validator.schema.org)
+
+---
+
+## Phase 7: Additional Features (Optional)
+
+- [ ] **Landing page full-bleed photo emphasis** — improve hero/main sections so photos take center stage, like reference sites (haeseok.com, dojuje.co.kr). Shift from text-heavy layout → full-screen image or large split-layout
+- [ ] Portfolio gallery lightbox
+- [ ] KakaoTalk floating button
 - [ ] Sanity Visual Editing / Draft Mode
-- [ ] Instagram 피드 연동
-- [ ] Vercel OG 동적 이미지
-- [ ] `@sanity/document-internationalization` 플러그인
+- [ ] Instagram feed integration
+- [ ] Vercel OG dynamic image
+- [ ] `@sanity/document-internationalization` plugin
 
 ---
 
-## Phase 8: 보안 업그레이드 (별도 브랜치 `feat/upgrade-next15`)
+## Phase 8: Security Upgrade (separate branch `feat/upgrade-next15`)
 
-> `npm audit`에서 발견된 고위험 취약점 해결. `npm audit fix --force` 사용 불가 (Sanity v2 다운그레이드 오추천).
+> Resolves high-severity vulnerabilities found by `npm audit`. Cannot use `npm audit fix --force` (would incorrectly downgrade Sanity to v2).
 
-- [ ] Next.js 14 → 15 마이그레이션
-- [ ] next-intl v3 → v4 마이그레이션 (v4는 Next 15+ 전용)
-- [ ] 코드 변경 사항 검증 (`npm run typecheck`, `npm run build`)
-- [ ] Sanity는 v3 유지 (audit fix 대상 제외)
+- [ ] Next.js 14 → 15 migration
+- [ ] next-intl v3 → v4 migration (v4 requires Next 15+)
+- [ ] Validate changes (`npm run typecheck`, `npm run build`)
+- [ ] Keep Sanity at v3 (excluded from audit fix)
