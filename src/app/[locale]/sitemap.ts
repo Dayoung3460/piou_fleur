@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { sanityFetch } from '@/sanity/client'
 import { portfolioSlugsQuery, journalSlugsQuery } from '@/sanity/queries'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pioufleur.com'
+import { siteUrl } from '@/lib/seo'
 
 export default async function sitemap({
   params,
@@ -25,19 +24,20 @@ export default async function sitemap({
   let journalPages: MetadataRoute.Sitemap = []
 
   try {
-    const portfolioSlugs = await sanityFetch<Array<{ slug: string; category: string }}>({
-      query: portfolioSlugsQuery,
-      tags: ['portfolio'],
-    })
+    const [portfolioSlugs, journalSlugs] = await Promise.all([
+      sanityFetch<Array<{ slug: string; category: string }>>({
+        query: portfolioSlugsQuery,
+        tags: ['portfolio'],
+      }),
+      sanityFetch<Array<{ slug: string }>>({
+        query: journalSlugsQuery,
+        tags: ['journal'],
+      }),
+    ])
     portfolioPages = portfolioSlugs.map(({ slug, category }) => ({
       url: `${base}/portfolio/${category}/${slug}`,
       priority: 0.7,
     }))
-
-    const journalSlugs = await sanityFetch<Array<{ slug: string }}>({
-      query: journalSlugsQuery,
-      tags: ['journal'],
-    })
     journalPages = journalSlugs.map(({ slug }) => ({
       url: `${base}/journal/${slug}`,
       priority: 0.6,
