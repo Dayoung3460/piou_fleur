@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "portfolio": "포트폴리오",
+    "services": "서비스",
+    "journal": "저널",
+    "contact": "문의"
+  },
+  "hero": {
+    "tagline": "꽃이 기억의 일부가 되는 곳.",
+    "subtagline": "웨딩, 프로포즈, 그리고 일상의 특별한 순간을 위한 플로럴 스튜디오",
+    "cta_portfolio": "포트폴리오 보기",
+    "cta_contact": "문의하기"
+  },
+  "home": {
+    "featured_title": "Featured Works",
+    "featured_subtitle": "피우 플레르의 작업들",
+    "services_title": "Services",
+    "services_subtitle": "어떤 순간도 특별하게",
+    "cta_title": "소중한 순간을 꽃으로 기억하고 싶으신가요?",
+    "cta_subtitle": "웨딩, 프로포즈, 클래스 — 어떤 순간이든 함께 만들어갑니다.",
+    "cta_button": "지금 문의하기"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "모든 작업은 하나의 이야기입니다",
+    "all": "전체",
+    "categories": {
+      "bouquet": "부케",
+      "flowers": "꽃다발",
+      "proposal": "프로포즈",
+      "basket": "꽃바구니",
+      "event": "이벤트",
+      "class": "클래스"
+    },
+    "project_info": "프로젝트 정보",
+    "client": "클라이언트",
+    "location": "장소",
+    "year": "연도",
+    "category": "카테고리",
+    "back": "포트폴리오로 돌아가기"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "당신의 순간을 꽃으로 완성합니다",
+    "bouquet": {
+      "title": "부케",
+      "description": "웨딩, 프로포즈, 기념일을 위한 특별한 부케. 고객의 이야기와 감성을 담아 세상에 하나뿐인 부케를 제작합니다."
+    },
+    "flowers": {
+      "title": "꽃다발",
+      "description": "소중한 사람에게 전하는 마음을 꽃다발로 담습니다. 계절의 꽃으로 감성을 더해 정성껏 제작합니다."
+    },
+    "proposal": {
+      "title": "프로포즈",
+      "description": "그 순간을 평생 기억할 수 있도록. 공간 연출부터 부케까지, 당신의 프로포즈를 꽃으로 완성합니다."
+    },
+    "basket": {
+      "title": "꽃바구니",
+      "description": "마음을 담은 꽃바구니. 생일, 개업, 기념일 등 소중한 순간의 선물로 정성스럽게 제작합니다."
+    },
+    "event": {
+      "title": "이벤트",
+      "description": "브랜드 팝업, 기업 행사, 론칭 파티를 위한 플로럴 스타일링을 제공합니다."
+    },
+    "class": {
+      "title": "클래스",
+      "description": "원데이 클래스부터 정규 과정까지, 꽃과 함께하는 시간을 선물합니다."
+    },
+    "inquiry": "문의하기"
+  },
+  "about": {
+    "title": "About",
+    "studio_title": "Piou Fleur",
+    "studio_description": "피오유플레르는 꽃이 기억의 일부가 되는 순간을 만드는 플로럴 스튜디오입니다. 경주에서, 웨딩과 프로포즈, 플라워 클래스와 정기 구독을 통해 꽃이 가진 아름다움을 당신의 일상으로 전합니다.",
+    "philosophy_title": "Philosophy",
+    "philosophy_description": "화려함보다 감성을, 트렌드보다 고객의 이야기를 담습니다. 모든 작업은 클라이언트의 공간과 순간에 어울리는 고유한 플로럴 언어로 완성됩니다.",
+    "florist_title": "Florist"
+  },
+  "journal": {
+    "title": "Journal",
+    "subtitle": "꽃과 계절에 대한 이야기",
+    "read_more": "더 읽기",
+    "back": "저널로 돌아가기"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "함께 만들어갈 이야기를 들려주세요",
+    "address": "경북 경주시 알천북로 153 3층",
+    "location_label": "오시는 길",
+    "kakao": "카카오톡 상담",
+    "instagram": "인스타그램 DM",
+    "phone": "전화",
+    "naver": "네이버 톡톡 문의",
+    "inquiry_title": "문의 내용",
+    "inquiry_type": "문의 유형",
+    "inquiry_date": "희망 날짜",
+    "inquiry_venue": "장소 (선택)",
+    "inquiry_message": "문의 내용",
+    "inquiry_submit": "카카오로 문의하기",
+    "errors": {
+      "required": "필수 항목입니다.",
+      "min_message": "최소 10자 이상 입력해 주세요."
+    },
+    "inquiry_types": {
+      "wedding": "웨딩 문의",
+      "event": "이벤트 문의",
+      "styling": "스타일링 문의",
+      "class": "클래스 문의",
+      "other": "기타 문의"
+    }
+  },
+  "footer": {
+    "tagline": "Flowers that become part of your memories.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "view_all": "전체 보기",
+    "back_to_top": "맨 위로"
+  }
+}

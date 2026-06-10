@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "journal": "Journal",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Flowers that become part of your memories.",
+    "subtagline": "A floral studio for weddings, proposals, and the quiet moments worth remembering.",
+    "cta_portfolio": "View Portfolio",
+    "cta_contact": "Get in Touch"
+  },
+  "home": {
+    "featured_title": "Featured Works",
+    "featured_subtitle": "Selected works by Piou Fleur",
+    "services_title": "Services",
+    "services_subtitle": "Making every moment extraordinary",
+    "cta_title": "Want to turn a precious moment into a memory?",
+    "cta_subtitle": "Weddings, proposals, classes — let's make it happen together.",
+    "cta_button": "Contact Us"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Every work tells a story",
+    "all": "All",
+    "categories": {
+      "bouquet": "Bouquet",
+      "flowers": "Flowers",
+      "proposal": "Proposal",
+      "basket": "Basket",
+      "event": "Event",
+      "class": "Class"
+    },
+    "project_info": "Project Info",
+    "client": "Client",
+    "location": "Location",
+    "year": "Year",
+    "category": "Category",
+    "back": "Back to Portfolio"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Completing your moments with flowers",
+    "bouquet": {
+      "title": "Bouquet",
+      "description": "A bespoke bouquet for weddings, proposals, and anniversaries — crafted with your story and emotion, one of a kind."
+    },
+    "flowers": {
+      "title": "Flowers",
+      "description": "Express your feelings through a beautifully arranged bouquet. Seasonal blooms, thoughtfully composed."
+    },
+    "proposal": {
+      "title": "Proposal",
+      "description": "A moment you'll remember for a lifetime. From venue styling to the bouquet — we complete your proposal with flowers."
+    },
+    "basket": {
+      "title": "Basket",
+      "description": "A flower basket filled with heart. Crafted for birthdays, grand openings, anniversaries, and every meaningful occasion."
+    },
+    "event": {
+      "title": "Event",
+      "description": "Floral styling for brand pop-ups, corporate events, and launch parties."
+    },
+    "class": {
+      "title": "Class",
+      "description": "From one-day workshops to regular programs — a gift of time spent with flowers."
+    },
+    "inquiry": "Inquire"
+  },
+  "about": {
+    "title": "About",
+    "studio_title": "Piou Fleur",
+    "studio_description": "Piou Fleur is a floral studio dedicated to creating moments where flowers become part of your memories. Based in Gyeongju, we work with weddings, proposals, floral classes, and subscriptions — bringing the beauty of flowers into your everyday life.",
+    "philosophy_title": "Philosophy",
+    "philosophy_description": "We prioritize emotion over extravagance, and your story over trends. Every work is completed in a unique floral language that suits the client's space and moment.",
+    "florist_title": "Florist"
+  },
+  "journal": {
+    "title": "Journal",
+    "subtitle": "Stories about flowers and seasons",
+    "read_more": "Read More",
+    "back": "Back to Journal"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Tell us your story",
+    "address": "153 Alcheonbuk-ro, 3F, Gyeongju, Korea",
+    "location_label": "Find Us",
+    "kakao": "KakaoTalk Chat",
+    "instagram": "Instagram DM",
+    "phone": "Phone",
+    "naver": "Naver Talk",
+    "inquiry_title": "Send an Inquiry",
+    "inquiry_type": "Inquiry Type",
+    "inquiry_date": "Preferred Date",
+    "inquiry_venue": "Venue (optional)",
+    "inquiry_message": "Message",
+    "inquiry_submit": "Contact via KakaoTalk",
+    "errors": {
+      "required": "This field is required.",
+      "min_message": "Please enter at least 10 characters."
+    },
+    "inquiry_types": {
+      "wedding": "Wedding Inquiry",
+      "event": "Event Inquiry",
+      "styling": "Styling Inquiry",
+      "class": "Class Inquiry",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "tagline": "Flowers that become part of your memories.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "view_all": "View All",
+    "back_to_top": "Back to Top"
+  }
+}
