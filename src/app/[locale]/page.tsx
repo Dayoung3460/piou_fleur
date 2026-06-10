@@ -1,7 +1,6 @@
 import { setRequestLocale } from 'next-intl/server'
 import { HeroSection } from '@/components/home/HeroSection'
 import { FeaturedPortfolio } from '@/components/home/FeaturedPortfolio'
-import { ServicesOverview } from '@/components/home/ServicesOverview'
 import { ContactCTA } from '@/components/home/ContactCTA'
 import { sanityFetch } from '@/sanity/client'
 import { featuredPortfolioQuery } from '@/sanity/queries'
@@ -24,12 +23,13 @@ export default async function HomePage({ params: { locale } }: Props) {
     // Sanity not configured yet — show empty state
   }
 
+  const heroImage = featuredItems[0]?.coverImage ?? null
+
   return (
     <>
-      <HeroSection />
+      <HeroSection heroImage={heroImage} />
       <FeaturedPortfolio items={featuredItems} locale={locale as Locale} />
-      <ServicesOverview />
-      <ContactCTA />
+<ContactCTA />
     </>
   )
 }

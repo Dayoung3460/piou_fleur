@@ -3,21 +3,29 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
+import { SanityImage } from '@/components/ui/SanityImage'
+import type { SanityImageObject } from '@/types/sanity'
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const
 
-export function HeroSection() {
+interface HeroSectionProps {
+  heroImage: SanityImageObject | null
+}
+
+export function HeroSection({ heroImage }: HeroSectionProps) {
   const t = useTranslations('hero')
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
-        <p className="font-cormorant text-[20vw] font-light tracking-widest text-accent uppercase whitespace-nowrap">
-          Piou Fleur
-        </p>
-      </div>
+    <section className="relative min-h-screen grid grid-cols-1 md:grid-cols-[2fr_3fr] overflow-hidden bg-background">
 
-      <div className="container-content relative z-10 flex flex-col items-center text-center pt-24 pb-16">
+      {/* Text column — bottom on mobile, left on desktop */}
+      <div className="relative z-10 flex flex-col justify-center px-6 md:px-10 lg:px-16 py-32 md:py-0 order-2 md:order-1">
+        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none overflow-hidden">
+          <p className="font-cormorant text-[20vw] font-light tracking-widest text-accent uppercase whitespace-nowrap">
+            Piou Fleur
+          </p>
+        </div>
+
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +39,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: EASE }}
-          className="heading-display mb-6 max-w-4xl"
+          className="heading-display mb-6"
         >
           {t('tagline')}
         </motion.h1>
@@ -40,7 +48,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: EASE }}
-          className="body-text max-w-md mb-12"
+          className="body-text max-w-sm mb-12"
         >
           {t('subtagline')}
         </motion.p>
@@ -58,6 +66,21 @@ export function HeroSection() {
             {t('cta_contact')}
           </Link>
         </motion.div>
+      </div>
+
+      {/* Image column — top on mobile, right on desktop */}
+      <div className="relative h-[60vh] md:min-h-screen overflow-hidden order-1 md:order-2">
+        {heroImage ? (
+          <SanityImage
+            image={heroImage}
+            alt="Piou Fleur"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 60vw"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-accent-light" />
+        )}
       </div>
 
       <motion.div
