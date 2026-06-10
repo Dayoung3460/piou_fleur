@@ -132,7 +132,9 @@
 
 - [ ] **Landing page full-bleed photo emphasis** — improve hero/main sections so photos take center stage, like reference sites (haeseok.com, dojuje.co.kr). Shift from text-heavy layout → full-screen image or large split-layout
 - [ ] Portfolio gallery lightbox
-- [ ] KakaoTalk floating button
+- [x] KakaoTalk floating button — fixed bottom-right corner, always visible (primary contact method for Korean users)
+- [ ] **Services page anchor nav** — add sticky horizontal pill nav at top (꽃다발 | 생화 | 프로포즈 | …) that scrolls to `id={key}` anchors; currently anchors exist but are unreachable without manual scrolling
+- [ ] **Portfolio scroll animations** — stagger card entrance on scroll (Framer Motion already available); currently all cards render at once with no reveal
 - [ ] Sanity Visual Editing / Draft Mode
 - [ ] Instagram feed integration
 - [ ] Vercel OG dynamic image
