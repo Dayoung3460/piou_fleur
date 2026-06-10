@@ -25,7 +25,7 @@ export function ServicesOverview() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceTypes.map((type) => (
             <StaggerItem key={type}>
-              <Link href="/services" className="group block p-8 bg-background hover:shadow-sm transition-shadow duration-300">
+              <Link href={`/services#${type}`} className="group block p-8 bg-background hover:shadow-sm transition-shadow duration-300">
                 <p className="text-accent text-2xl mb-6">{serviceIcons[type]}</p>
                 <h3 className="heading-3 mb-3 group-hover:text-accent transition-colors duration-300">
                   {t(`${type}.title`)}

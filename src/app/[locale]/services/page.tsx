@@ -52,7 +52,8 @@ export default async function ServicesPage({ params: { locale } }: Props) {
               const isReversed = idx % 2 !== 0
 
               return (
-                <FadeIn key={key}>
+                <div key={key} id={key}>
+                <FadeIn>
                   <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${isReversed ? 'md:[&>*:first-child]:order-2' : ''}`}>
                     <div className="aspect-[4/3] bg-accent-light relative overflow-hidden">
                       {service?.images && (
@@ -82,6 +83,7 @@ export default async function ServicesPage({ params: { locale } }: Props) {
                     </div>
                   </div>
                 </FadeIn>
+                </div>
               )
             })}
           </div>
