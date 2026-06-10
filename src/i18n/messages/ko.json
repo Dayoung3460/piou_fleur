@@ -15,7 +15,7 @@
   },
   "home": {
     "featured_title": "Featured Works",
-    "featured_subtitle": "피우 플레르의 작업들",
+    "featured_subtitle": "피오유 플레르의 작업들",
     "services_title": "Services",
     "services_subtitle": "어떤 순간도 특별하게",
     "cta_title": "소중한 순간을 꽃으로 기억하고 싶으신가요?",
@@ -73,10 +73,11 @@
   "about": {
     "title": "About",
     "studio_title": "Piou Fleur",
-    "studio_description": "피오유플레르는 꽃이 기억의 일부가 되는 순간을 만드는 플로럴 스튜디오입니다. 경주에서, 웨딩과 프로포즈, 플라워 클래스와 정기 구독을 통해 꽃이 가진 아름다움을 당신의 일상으로 전합니다.",
+    "studio_description": "피오유 플레르는 꽃이 기억의 일부가 되는 순간을 만드는 플로럴 스튜디오입니다. 경주에서, 웨딩과 프로포즈, 플라워 클래스와 정기 구독을 통해 꽃이 가진 아름다움을 당신의 일상으로 전합니다.",
     "philosophy_title": "Philosophy",
     "philosophy_description": "화려함보다 감성을, 트렌드보다 고객의 이야기를 담습니다. 모든 작업은 클라이언트의 공간과 순간에 어울리는 고유한 플로럴 언어로 완성됩니다.",
-    "florist_title": "Florist"
+    "florist_title": "Florist",
+    "florist_description": "피오유 플레르의 플로리스트는 꽃의 언어로 감정을 담습니다. 각각의 작업에서 클라이언트의 이야기를 꽃으로 표현합니다."
   },
   "journal": {
     "title": "Journal",
