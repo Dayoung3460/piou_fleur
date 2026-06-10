@@ -2,11 +2,10 @@
 
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
+import { PORTFOLIO_CATEGORIES } from '@/types/sanity'
 import type { PortfolioCategory } from '@/types/sanity'
 
-const categories: Array<PortfolioCategory | 'all'> = [
-  'all', 'bouquet', 'flowers', 'proposal', 'basket', 'event', 'class',
-]
+const categories: Array<PortfolioCategory | 'all'> = ['all', ...PORTFOLIO_CATEGORIES]
 
 interface CategoryFilterProps {
   activeCategory: PortfolioCategory | 'all'

@@ -22,7 +22,8 @@ export interface SanityImageObject {
   alt?: string
 }
 
-export type PortfolioCategory = 'bouquet' | 'flowers' | 'proposal' | 'basket' | 'event' | 'class'
+export const PORTFOLIO_CATEGORIES = ['bouquet', 'flowers', 'proposal', 'basket', 'event', 'class'] as const
+export type PortfolioCategory = typeof PORTFOLIO_CATEGORIES[number]
 
 export interface PortfolioItem {
   _id: string
@@ -43,7 +44,7 @@ export interface Service {
   _id: string
   title: LocalizedString
   slug: { current: string }
-  type: 'bouquet' | 'flowers' | 'proposal' | 'basket' | 'event' | 'class'
+  type: PortfolioCategory
   description?: LocalizedBlockContent
   images?: SanityImageObject
   order: number
