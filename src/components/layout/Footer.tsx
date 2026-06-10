@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
+import { LocaleSwitcher } from './LocaleSwitcher'
 
 export function Footer() {
   const t = useTranslations()
@@ -58,10 +59,7 @@ export function Footer() {
           <p className="text-xs text-text-muted">
             © {year} Piou Fleur. {t('footer.rights')}
           </p>
-          <div className="flex gap-6">
-            <Link href="/ko" className="text-xs text-text-muted hover:text-text transition-colors">KO</Link>
-            <Link href="/en" className="text-xs text-text-muted hover:text-text transition-colors">EN</Link>
-          </div>
+          <LocaleSwitcher />
         </div>
       </div>
     </footer>
