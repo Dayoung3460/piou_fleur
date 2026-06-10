@@ -3,11 +3,10 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
-import { cormorant, inter } from '@/lib/fonts'
 import { routing } from '@/i18n/routing'
+import { siteUrl } from '@/lib/seo'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import '../globals.css'
 
 interface Props {
   children: ReactNode
@@ -23,8 +22,6 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pioufleur.com'
-
   return {
     metadataBase: new URL(siteUrl),
     title: {
@@ -44,22 +41,6 @@ export async function generateMetadata({
   }
 }
 
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': process.env.NEXT_PUBLIC_SITE_URL || 'https://pioufleur.com',
-  name: 'Piou Fleur',
-  description: '럭셔리 플로럴 스튜디오',
-  image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pioufleur.com'}/og-image.jpg`,
-  priceRange: '₩₩₩',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'KR',
-    addressLocality: '서울',
-  },
-  sameAs: ['https://www.instagram.com/pioufleur'],
-}
-
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
   if (!routing.locales.includes(locale as 'ko' | 'en')) {
     notFound()
@@ -69,20 +50,10 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${cormorant.variable} ${inter.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-        />
-      </head>
-      <body className="bg-background text-text antialiased min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
   )
 }
