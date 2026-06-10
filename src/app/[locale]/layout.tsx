@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing'
 import { siteUrl } from '@/lib/seo'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { KakaoFloatingButton } from '@/components/ui/KakaoFloatingButton'
 
 interface Props {
   children: ReactNode
@@ -54,6 +55,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <KakaoFloatingButton />
     </NextIntlClientProvider>
   )
 }
