@@ -34,7 +34,7 @@ export default async function ServicesPage({ params: { locale } }: Props) {
     // Sanity not configured
   }
 
-  const serviceKeys = ['wedding', 'event', 'styling', 'class', 'propose', 'subscription'] as const
+  const serviceKeys = ['bouquet', 'flowers', 'proposal', 'basket', 'event', 'class'] as const
   type ServiceKey = typeof serviceKeys[number]
 
   return (
@@ -55,9 +55,9 @@ export default async function ServicesPage({ params: { locale } }: Props) {
                 <FadeIn key={key}>
                   <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${isReversed ? 'md:[&>*:first-child]:order-2' : ''}`}>
                     <div className="aspect-[4/3] bg-accent-light relative overflow-hidden">
-                      {service?.images?.[0] && (
+                      {service?.images && (
                         <SanityImage
-                          image={service.images[0]}
+                          image={service.images}
                           alt={getLocalized(service.title, locale) ?? ''}
                           fill
                           sizes="50vw"

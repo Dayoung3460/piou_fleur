@@ -27,9 +27,11 @@ export const service = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Wedding', value: 'wedding' },
+          { title: 'Bouquet', value: 'bouquet' },
+          { title: 'Flowers', value: 'flowers' },
+          { title: 'Proposal', value: 'proposal' },
+          { title: 'Basket', value: 'basket' },
           { title: 'Event', value: 'event' },
-          { title: 'Styling', value: 'styling' },
           { title: 'Class', value: 'class' },
         ],
       },
@@ -56,17 +58,9 @@ export const service = defineType({
     }),
     defineField({
       name: 'images',
-      title: 'Images',
-      type: 'array',
-      of: [
-        {
-          type: 'image',
-          options: { hotspot: true },
-          fields: [
-            { name: 'alt', type: 'string', title: 'Alt text' },
-          ],
-        },
-      ],
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
     }),
     defineField({
       name: 'order',
@@ -86,7 +80,7 @@ export const service = defineType({
     select: {
       title: 'title.ko',
       subtitle: 'type',
-      media: 'images.0',
+      media: 'images',
     },
     prepare({ title, subtitle, media }) {
       return { title: title || 'Untitled', subtitle, media }

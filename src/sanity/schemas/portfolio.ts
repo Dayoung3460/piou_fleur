@@ -28,11 +28,12 @@ export const portfolio = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Wedding', value: 'wedding' },
+          { title: 'Bouquet', value: 'bouquet' },
+          { title: 'Flowers', value: 'flowers' },
+          { title: 'Proposal', value: 'proposal' },
+          { title: 'Basket', value: 'basket' },
           { title: 'Event', value: 'event' },
-          { title: 'Styling', value: 'styling' },
-          { title: 'Editorial', value: 'editorial' },
-          { title: 'Classes', value: 'classes' },
+          { title: 'Class', value: 'class' },
         ],
       },
       validation: (Rule) => Rule.required(),

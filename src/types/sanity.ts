@@ -22,7 +22,7 @@ export interface SanityImageObject {
   alt?: string
 }
 
-export type PortfolioCategory = 'wedding' | 'event' | 'styling' | 'editorial' | 'classes'
+export type PortfolioCategory = 'bouquet' | 'flowers' | 'proposal' | 'basket' | 'event' | 'class'
 
 export interface PortfolioItem {
   _id: string
@@ -43,9 +43,9 @@ export interface Service {
   _id: string
   title: LocalizedString
   slug: { current: string }
-  type: 'wedding' | 'event' | 'styling' | 'class' | 'propose' | 'subscription'
+  type: 'bouquet' | 'flowers' | 'proposal' | 'basket' | 'event' | 'class'
   description?: LocalizedBlockContent
-  images?: SanityImageObject[]
+  images?: SanityImageObject
   order: number
 }
 

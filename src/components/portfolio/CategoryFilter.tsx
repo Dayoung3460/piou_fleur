@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import type { PortfolioCategory } from '@/types/sanity'
 
 const categories: Array<PortfolioCategory | 'all'> = [
-  'all', 'wedding', 'event', 'styling', 'editorial', 'classes',
+  'all', 'bouquet', 'flowers', 'proposal', 'basket', 'event', 'class',
 ]
 
 interface CategoryFilterProps {

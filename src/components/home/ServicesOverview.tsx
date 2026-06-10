@@ -2,12 +2,12 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/FadeIn'
 
-const serviceTypes = ['wedding', 'event', 'styling', 'class'] as const
+const serviceTypes = ['bouquet', 'proposal', 'event', 'class'] as const
 
 const serviceIcons: Record<string, string> = {
-  wedding: '✶',
+  bouquet: '✶',
+  proposal: '○',
   event: '◇',
-  styling: '○',
   class: '△',
 }
 
